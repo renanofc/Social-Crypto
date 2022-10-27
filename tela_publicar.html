@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>SocialCrypto | Publicar Post</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-bitcoin icon'></i>
+            <div class="logo_name">SocialCrypto</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="tela_menu.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Menu</span>
+                </a>
+                <span class="tooltip">Menu</span>
+            </li>
+            <li>
+                <a href="tela_perfil.html">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Perfil</span>
+                </a>
+                <span class="tooltip">Perfil</span>
+            </li>
+            <li>
+                <a href="tela_publicar.html">
+                    <i class='bx bx-comment-add'></i>
+                    <span class="links_name">Criar Post</span>
+                </a>
+                <span class="tooltip">Criar Post</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="imagem_criptopp" src="./imagens/btc.png" alt="">
+                    <span class="links_name">Bitcoin</span>
+                </a>
+                <span class="tooltip">Bitcoin</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="imagem_cripto" src="./imagens/ethereum.png" alt="">
+                    <span class="links_name">Ethereum</span>
+                </a>
+                <span class="tooltip">Ethereum</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="imagem_cripto" src="./imagens/dogecoin.png" alt="">
+                    <span class="links_name">Dogecoin</span>
+                </a>
+                <span class="tooltip">Dogecoin</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="imagem_cripto" src="./imagens/bnb.png" alt="">
+                    <span class="links_name">BNB</span>
+                </a>
+                <span class="tooltip">BNB</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="imagem_cripto" src="./imagens/solana.png" alt="">
+                    <span class="links_name">Solana</span>
+                </a>
+                <span class="tooltip">Solana</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="imagem_cripto" src="./imagens/tether.png" alt="">
+                    <span class="links_name">Tether</span>
+                </a>
+                <span class="tooltip">Tether</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="imagem_cripto" src="./imagens/cardano.png" alt="">
+                    <span class="links_name">Cardano</span>
+                </a>
+                <span class="tooltip">Cardano</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="imagem_cripto" src="./imagens/busd.png" alt="">
+                    <span class="links_name">BUSD</span>
+                </a>
+                <span class="tooltip">BUSD</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="imagem_cripto" src="./imagens/usd_coin.png" alt="">
+                    <span class="links_name">USD Coin</span>
+                </a>
+                <span class="tooltip">USD Coin</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img id="prf" src="./imagens/perfil.jpg" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Mauricio Alcantara</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="coment">
+            <div class="coment_area1">
+                <div class="profile_coment">
+                    <img class="coment_img" src="./imagens/perfil.jpg" alt="">
+                    <div class="coment_usuario">Mauricio Alcantara</div>
+                </div>
+                <div class="coment_post">
+                    <textarea id="new_post"></textarea>
+                </div>
+                <div class="coment_moeda1">
+                    <div class="dropdown">
+                        <button class="dropbtn">Moeda</button>
+                        <div class="dropdown-content">
+                            <a href="#">Bitcoin</a>
+                            <a href="#">Ethereum</a>
+                            <a href="#">Dogecoin</a>
+                            <a href="#">BNB</a>
+                            <a href="#">Solana</a>
+                            <a href="#">Tether</a>
+                            <a href="#">Cardano</a>
+                            <a href="#">BUSD</a>
+                            <a href="#">USD Coin</a>
+                        </div>
+                    </div>
+                    <button class="btn_publicar">Publicar</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();//calling the function(optional)
+        });
+
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+            }
+        }
+    </script>
+
+</body>
+</html>
